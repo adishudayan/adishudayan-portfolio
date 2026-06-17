@@ -33,8 +33,7 @@ const workItems = [
     slug: 'dateryx',
     title: 'Dateryx',
     year: '2026',
-    image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop',
+    image: '/dateryx-screen1.png',
     description:
       'Founded and shipped a SaaS that turns spreadsheets into instant dashboards and KPIs.',
     tags: ['Founder Project', 'Data Visualisation', 'AI Product Design'],
@@ -43,8 +42,7 @@ const workItems = [
     slug: 'voice-commerce',
     title: 'Voice Commerce CUX',
     year: '2025',
-    image:
-      'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=2000&auto=format&fit=crop',
+    image: '/conversational-ux-thumnail',
     description:
       'Designed a hybrid voice and visual model for completing eCommerce tasks without a screen.',
     tags: ['Conversational UX', 'R&D Concept', 'eCommerce UX'],
