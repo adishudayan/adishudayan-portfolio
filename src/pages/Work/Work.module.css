@@ -1,0 +1,231 @@
+.work {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+/* ─── Intro ───────────────────────────────────────────── */
+.intro {
+  background-color: #0d0d0d;
+  color: #f8f8f2;
+  padding: 14rem 6rem 8rem;
+}
+
+.introInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem 8rem;
+  align-items: end;
+}
+
+.introEyebrow {
+  grid-column: 1 / -1;
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(248, 248, 242, 0.35);
+  margin-bottom: -2rem;
+}
+
+.introHeading {
+  font-size: clamp(3.5rem, 7vw, 9rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.93;
+  color: #f8f8f2;
+  margin: 0;
+  align-self: end;
+}
+
+.introPara {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: rgba(248, 248, 242, 0.5);
+  max-width: 480px;
+  align-self: end;
+  padding-bottom: 0.4rem;
+}
+
+/* ─── Grid ────────────────────────────────────────────── */
+.gridSection {
+  background-color: var(--bg-color);
+}
+
+.gridInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 8rem 6rem 10rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem 6rem;
+}
+
+/* Masonry offset on even cards */
+.card:nth-child(even) {
+  margin-top: 6rem;
+}
+
+/* ─── Card ────────────────────────────────────────────── */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #e4e0d8;
+  border-radius: 4px;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .cardImage {
+  transform: scale(1.04);
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .cardOverlay {
+  opacity: 1;
+}
+
+.overlayLabel {
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #fff;
+  padding: 0.85rem 2.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  backdrop-filter: blur(8px);
+  transform: translateY(12px);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .overlayLabel {
+  transform: translateY(0);
+}
+
+/* ─── Card Info ───────────────────────────────────────── */
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.cardTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  background-color: rgba(17, 17, 17, 0.06);
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  opacity: 0.8;
+}
+
+.cardYear {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.6;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.cardTitle {
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .cardTitle {
+  opacity: 0.6;
+}
+
+.cardDesc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 42ch;
+}
+
+/* ─── Responsive ──────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .intro {
+    padding: 12rem 4rem 7rem;
+  }
+  .introInner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .introEyebrow {
+    margin-bottom: 0;
+  }
+  .gridInner {
+    padding: 6rem 4rem 8rem;
+  }
+  .grid {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding: 10rem 1.5rem 5rem;
+  }
+  .gridInner {
+    padding: 4rem 1.5rem 6rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .card:nth-child(even) {
+    margin-top: 0;
+  }
+}

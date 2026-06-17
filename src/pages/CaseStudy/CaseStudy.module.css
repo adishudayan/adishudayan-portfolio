@@ -1,0 +1,1134 @@
+.caseStudy {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* ─── Back Button ────────────────────────────────────────────── */
+.backButton {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  mix-blend-mode: difference;
+}
+
+.backButton:hover {
+  opacity: 1;
+}
+
+.backArrow {
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+  position: relative;
+}
+
+.backArrow::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  border-left: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(45deg);
+}
+
+/* ─── Hook ───────────────────────────────────────────────────── */
+.hookSection {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 8rem 6rem 8rem;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hookSection.hookLight {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+.hookEyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.4;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+.hookTitle {
+  font-size: clamp(2.8rem, 5.5vw, 7rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  max-width: 1100px;
+  margin-bottom: 0;
+}
+
+.hookQuoteMark {
+  opacity: 0.3;
+  display: block;
+  font-size: clamp(4rem, 8vw, 10rem);
+  line-height: 0.6;
+  margin-bottom: 1.5rem;
+  font-family: Georgia, serif;
+}
+
+.hookMeta {
+  margin-top: 6rem;
+  display: flex;
+  gap: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 2.5rem;
+}
+
+.hookSection.hookLight .hookMeta {
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+.hookMetaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.hookMetaLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.4;
+}
+
+.hookMetaValue {
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.statusDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #6fde9f;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* ─── Shared Section Shell ───────────────────────────────────── */
+.sectionInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 9rem 6rem;
+}
+
+.sectionEyebrow {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+/* ─── Overview ───────────────────────────────────────────────── */
+.overviewGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 10rem;
+  align-items: flex-start;
+}
+
+.overviewBody {
+  font-size: 1.45rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.overviewBody p {
+  margin-bottom: 1.5rem;
+}
+
+.overviewBody p:last-child {
+  margin-bottom: 0;
+}
+
+.snapshotList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 1.5rem;
+}
+
+.snapshotItem {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.snapshotItem:last-child {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.snapshotLabel {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  display: block;
+  opacity: 0.5;
+}
+
+/* ─── Single Section ─────────────────────────────────────────── */
+.singleGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 8rem;
+  align-items: flex-start;
+}
+
+.singleTitleWrap {
+  position: sticky;
+  top: 8rem;
+}
+
+.singleTitle {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.singleBody {
+  font-size: 1.3rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+.singleBody p {
+  margin-bottom: 1.6rem;
+}
+
+.singleBody p:last-child {
+  margin-bottom: 0;
+}
+
+.singlePlaceholder {
+  margin-top: 3rem;
+}
+
+/* ─── Process Section ────────────────────────────────────────── */
+.processHeader {
+  max-width: 780px;
+  margin-bottom: 5rem;
+}
+
+.processTitle {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+}
+
+.processBody {
+  font-size: 1.3rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+.processItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--border-color);
+  margin-bottom: 5rem;
+}
+
+.processItem {
+  padding: 3rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.processItem:nth-child(odd) {
+  border-right: 1px solid var(--border-color);
+}
+
+.processItemLabel {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-secondary);
+  opacity: 0.5;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.processItemText {
+  font-size: 1.25rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.processClosing {
+  max-width: 780px;
+  font-size: 1.3rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+/* ─── Decisions / Lessons ────────────────────────────────────── */
+.decisionsSection {
+  background-color: var(--bg-color);
+}
+
+.decisionsHeader {
+  margin-bottom: 6rem;
+}
+
+.decisionsTitle {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.decisionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.decisionCard {
+  padding: 4rem 3.5rem;
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.decisionCard:last-child {
+  border-right: none;
+}
+
+.decisionNumber {
+  font-size: clamp(5rem, 8vw, 9rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text-primary);
+  opacity: 0.08;
+  margin-bottom: 2.5rem;
+  display: block;
+}
+
+.decisionTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.decisionBody {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.decisionBody p {
+  margin-bottom: 1rem;
+}
+
+.decisionBody p:last-child {
+  margin-bottom: 0;
+}
+
+.decisionPlaceholderWrap {
+  margin-top: 2.5rem;
+}
+
+/* Lessons — same card grid, slightly different label treatment */
+.lessonsIntro {
+  max-width: 780px;
+  font-size: 1.3rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 5rem;
+}
+
+/* ─── Accent Section ─────────────────────────────────────────── */
+.accentSection {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.accentSection .sectionEyebrow {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.accentTitle {
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  max-width: 860px;
+  margin-bottom: 3rem;
+}
+
+.accentBody {
+  font-size: 1.3rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 780px;
+}
+
+.accentBody p {
+  margin-bottom: 1.6rem;
+}
+
+.accentBody p:last-child {
+  margin-bottom: 0;
+}
+
+.accentHighlight {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: #ffffff;
+  max-width: 780px;
+  margin-top: 4rem;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.accentPlaceholderWrap {
+  margin-top: 5rem;
+}
+
+.accentSliderWrap {
+  margin-top: 5rem;
+}
+
+/* ─── Standalone Slider Section ──────────────────────────────── */
+.sliderSection {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 6rem 9rem;
+}
+
+@media (max-width: 1100px) {
+  .sliderSection {
+    padding: 0 4rem 7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sliderSection {
+    padding: 0 2rem 5rem;
+  }
+}
+
+/* ─── Slider ─────────────────────────────────────────────────── */
+.slider {
+  width: 100%;
+}
+
+.sliderTrack {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.sliderImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.sliderImgActive {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sliderControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.sliderBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+  cursor: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.sliderBtn:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+}
+
+.sliderDots {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.sliderDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  cursor: none;
+  transition: background 0.25s ease, transform 0.25s ease;
+  padding: 0;
+}
+
+.sliderDot:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.sliderDotActive {
+  background: #ffffff;
+  transform: scale(1.3);
+}
+
+/* Light background variant */
+.sliderLight .sliderBtn {
+  border-color: rgba(17, 17, 17, 0.2);
+  color: rgba(17, 17, 17, 0.5);
+}
+
+.sliderLight .sliderBtn:hover {
+  border-color: rgba(17, 17, 17, 0.6);
+  color: var(--text-primary);
+}
+
+.sliderLight .sliderDot {
+  background: rgba(17, 17, 17, 0.2);
+}
+
+.sliderLight .sliderDot:hover {
+  background: rgba(17, 17, 17, 0.4);
+}
+
+.sliderLight .sliderDotActive {
+  background: var(--text-primary);
+}
+
+/* ─── Pullquote ──────────────────────────────────────────────── */
+.pullquoteSection {
+  background-color: #0d0d0d;
+  color: #ffffff;
+}
+
+.pullquoteInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12rem 6rem;
+}
+
+.pullquoteMark {
+  font-size: clamp(5rem, 10vw, 12rem);
+  line-height: 0.6;
+  opacity: 0.15;
+  font-family: Georgia, serif;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.pullquoteText {
+  font-size: clamp(2rem, 4vw, 5rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 5rem;
+}
+
+.pullquoteDivider {
+  width: 60px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 4rem;
+}
+
+.pullquoteContext {
+  font-size: 1.3rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 680px;
+}
+
+.pullquoteContext p {
+  margin-bottom: 1.4rem;
+}
+
+.pullquoteContext p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Outcome ────────────────────────────────────────────────── */
+.outcomeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 8rem;
+  align-items: flex-start;
+}
+
+.outcomeTitleWrap {}
+
+.outcomeTitle {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+}
+
+.outcomeIntro {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.outcomeList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.outcomeItem {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.outcomeItemDash {
+  color: var(--text-primary);
+  opacity: 0.3;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* ─── Table Section (The Cuts) ───────────────────────────────── */
+.tableSection {
+  background-color: var(--bg-color);
+}
+
+.tableHeader {
+  margin-bottom: 4rem;
+}
+
+.tableTitle {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+}
+
+.tableIntro {
+  font-size: 1.3rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 780px;
+  margin-bottom: 4rem;
+}
+
+.cutsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 4rem;
+}
+
+.cutsTableHead {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cutsTableHeadCell {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-secondary);
+  opacity: 0.5;
+  text-align: left;
+  padding: 0 0 1.2rem;
+  font-weight: 400;
+}
+
+.cutsTableHeadCell:last-child {
+  text-align: right;
+}
+
+.cutsTableRow {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cutsTableCell {
+  padding: 1.8rem 0;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+.cutsTableDecision {
+  text-align: right;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.decisionCut {
+  color: #999;
+  opacity: 0.6;
+}
+
+.decisionShipped {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.tableClosing {
+  font-size: 1.3rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 780px;
+}
+
+/* ─── Problems Section ───────────────────────────────────────── */
+.problemsHeader {
+  margin-bottom: 6rem;
+}
+
+.problemsTitle {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.problemsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.problemCard {
+  padding: 4rem 4rem 4rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.problemCard:nth-child(odd) {
+  padding-right: 5rem;
+  border-right: 1px solid var(--border-color);
+}
+
+.problemCard:nth-child(even) {
+  padding-left: 5rem;
+  padding-right: 0;
+}
+
+.problemNumber {
+  font-size: clamp(5rem, 8vw, 9rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text-primary);
+  opacity: 0.08;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.problemTitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.problemBody {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.problemBody p {
+  margin-bottom: 1rem;
+}
+
+.problemBody p:last-child {
+  margin-bottom: 0;
+}
+
+.problemPlaceholderWrap {
+  margin-top: 2.5rem;
+}
+
+/* ─── Phases Section (Dateryx process) ──────────────────────── */
+.phasesHeader {
+  margin-bottom: 6rem;
+}
+
+.phasesTitle {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.phasesList {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-color);
+}
+
+.phaseItem {
+  display: grid;
+  grid-template-columns: 200px 1fr 1.5fr;
+  gap: 4rem;
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border-color);
+  align-items: flex-start;
+}
+
+.phaseLabel {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-secondary);
+  opacity: 0.5;
+  padding-top: 0.15rem;
+}
+
+.phaseTitle {
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.phaseBody {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* ─── Diagrams Section ───────────────────────────────────────── */
+.diagramsSection {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 6rem 9rem;
+}
+
+.diagramSingle {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.diagramPair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.diagramBottom {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.diagramImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* ─── Image Placeholder ──────────────────────────────────────── */
+.imagePlaceholder {
+  width: 100%;
+  background-color: #e4e0d8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  border-radius: 2px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #aaa;
+  font-family: var(--font-primary);
+}
+
+.imagePlaceholder.wide {
+  aspect-ratio: 16 / 9;
+}
+
+.imagePlaceholder.standard {
+  aspect-ratio: 4 / 3;
+}
+
+.imagePlaceholder.tall {
+  aspect-ratio: 3 / 4;
+}
+
+.imagePlaceholder.square {
+  aspect-ratio: 1 / 1;
+}
+
+.placeholderIcon {
+  width: 32px;
+  height: 32px;
+  opacity: 0.4;
+}
+
+.placeholderLabel {
+  max-width: 260px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ─── Next Case Study CTA ────────────────────────────────────── */
+.nextSection {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14rem 4rem;
+  text-align: center;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+  cursor: none;
+}
+
+.nextLabel {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  opacity: 0.4;
+}
+
+.nextTitle {
+  font-size: clamp(3rem, 8vw, 9rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  margin: 0;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nextSection:hover .nextTitle {
+  transform: scale(1.04);
+}
+
+.nextArrow {
+  font-size: 1.5rem;
+  opacity: 0.3;
+  margin-top: 1rem;
+}
+
+/* ─── Not Found ──────────────────────────────────────────────── */
+.notFound {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+}
+
+/* ─── Reveal Animation Target ────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .diagramsSection {
+    padding: 0 4rem 7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .diagramsSection {
+    padding: 0 2rem 5rem;
+  }
+
+  .diagramPair {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hookSection {
+    padding: 8rem 4rem 6rem;
+  }
+
+  .sectionInner {
+    padding: 7rem 4rem;
+  }
+
+  .overviewGrid {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+
+  .singleGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .singleTitleWrap {
+    position: static;
+  }
+
+  .decisionsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .decisionCard {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 3rem 0;
+  }
+
+  .decisionCard:last-child {
+    border-bottom: none;
+  }
+
+  .outcomeGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .processItems {
+    grid-template-columns: 1fr;
+  }
+
+  .processItem:nth-child(odd) {
+    border-right: none;
+  }
+
+  .problemsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .problemCard:nth-child(odd),
+  .problemCard:nth-child(even) {
+    padding: 3.5rem 0;
+    border-right: none;
+  }
+
+  .phaseItem {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hookMeta {
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hookSection {
+    padding: 6rem 2rem 4rem;
+    min-height: 90vh;
+  }
+
+  .hookTitle {
+    font-size: clamp(2.2rem, 8vw, 4rem);
+  }
+
+  .hookMeta {
+    margin-top: 4rem;
+    gap: 2rem;
+  }
+
+  .sectionInner {
+    padding: 5rem 2rem;
+  }
+
+  .pullquoteInner {
+    padding: 8rem 2rem;
+  }
+
+  .overviewBody {
+    font-size: 1.2rem;
+  }
+
+  .processItems {
+    margin-bottom: 3rem;
+  }
+
+  .processItem {
+    padding: 2rem;
+  }
+
+  .decisionCard {
+    padding: 2.5rem 0;
+  }
+
+  .nextSection {
+    padding: 10rem 2rem;
+  }
+}

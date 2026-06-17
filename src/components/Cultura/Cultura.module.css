@@ -1,0 +1,176 @@
+.culturaSection {
+  padding: 8rem 4rem;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  border-top: 1px solid var(--border-color);
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 8rem;
+}
+
+.introSection {
+  flex: 1;
+  max-width: 400px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0 2rem 0;
+}
+
+.introText {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0 0 4rem 0;
+}
+
+.viewMoreLink {
+  display: inline-flex;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.viewMoreLink:hover {
+  border-bottom-color: var(--text-primary);
+}
+
+.articlesList {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.articleItem {
+  border-top: 1px solid var(--border-color);
+  transition: padding-left 0.3s ease;
+}
+
+.articleItem:last-child {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.articleLink {
+  display: flex;
+  align-items: center;
+  padding: 2.5rem 0;
+  color: var(--text-primary);
+}
+
+.articleMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 150px;
+  min-width: 150px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  transition: color 0.3s ease;
+}
+
+.articleTitle {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: -0.01em;
+  transition: color 0.3s ease;
+}
+
+.middleSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.position {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.logoSection {
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoPlaceholder {
+  width: 60px;
+  height: 60px;
+  background-color: var(--border-color);
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Hover effects */
+.articleItem:hover {
+  padding-left: 1rem;
+}
+
+.articleItem:hover .articleMeta,
+.articleItem:hover .position {
+  color: var(--text-primary);
+}
+
+.articleItem:hover .articleTitle {
+  color: var(--hover-accent);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .introSection {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .culturaSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .articleLink {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+
+  .articleMeta {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .logoSection {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  
+  .articleItem:hover {
+    padding-left: 0;
+  }
+}

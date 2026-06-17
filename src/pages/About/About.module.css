@@ -1,0 +1,533 @@
+.about {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+/* ─── Hero ─────────────────────────────────────────────── */
+.hero {
+  min-height: 100vh;
+  background-color: #0d0d0d;
+  color: #f8f8f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 6rem;
+  position: relative;
+}
+
+.heroInner {
+  max-width: 1400px;
+  width: 100%;
+}
+
+.heroEyebrow {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(248, 248, 242, 0.4);
+  margin-bottom: 2rem;
+}
+
+.heroName {
+  font-size: clamp(4rem, 9vw, 11rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  margin-bottom: 3rem;
+  color: #f8f8f2;
+}
+
+.heroStatement {
+  font-size: clamp(1.2rem, 2.2vw, 2rem);
+  font-weight: 400;
+  line-height: 1.4;
+  color: rgba(248, 248, 242, 0.65);
+  max-width: 720px;
+  margin-bottom: 4rem;
+  letter-spacing: -0.01em;
+}
+
+.heroMeta {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 0.85rem;
+  color: rgba(248, 248, 242, 0.45);
+  letter-spacing: 0.04em;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(248, 248, 242, 0.1);
+  flex-wrap: wrap;
+}
+
+.metaDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(248, 248, 242, 0.25);
+  flex-shrink: 0;
+}
+
+.heroScroll {
+  position: absolute;
+  right: 6rem;
+  bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(248, 248, 242, 0.3);
+}
+
+.scrollLine {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(248, 248, 242, 0.3), transparent);
+}
+
+/* ─── Shared ────────────────────────────────────────────── */
+.sectionInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 9rem 6rem;
+}
+
+.sectionLabel {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  opacity: 0.6;
+  margin-bottom: 4rem;
+}
+
+/* ─── Bio ───────────────────────────────────────────────── */
+.bioGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 8rem;
+  align-items: start;
+}
+
+.portraitCol {
+  position: sticky;
+  top: 8rem;
+}
+
+.portrait {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: #e4e0d8;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.portraitImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.portraitCaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.bioLead {
+  font-size: clamp(1.5rem, 2.4vw, 2.4rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+}
+
+.bioParagraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.bioParagraphs p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* ─── Stats ─────────────────────────────────────────────── */
+.statsSection {
+  background-color: #111111;
+  color: #f8f8f2;
+}
+
+.statsSection .sectionInner {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 3rem 0;
+  border-top: 1px solid rgba(248, 248, 242, 0.1);
+}
+
+.statNumber {
+  font-size: clamp(2.8rem, 4.5vw, 5.5rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: #f8f8f2;
+}
+
+.statLabel {
+  font-size: 0.82rem;
+  color: rgba(248, 248, 242, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ─── Expertise ─────────────────────────────────────────── */
+.expertiseSection {
+  border-top: 1px solid var(--border-color);
+}
+
+.expertiseGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 8rem;
+  align-items: start;
+}
+
+.expertiseLabelCol {
+  position: sticky;
+  top: 8rem;
+}
+
+.expertiseLabelCol .sectionLabel {
+  margin-bottom: 0;
+}
+
+.expertiseContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.expertisePara {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.expertiseList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.expertiseItem {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--border-color);
+  transition: gap 0.3s ease;
+  cursor: default;
+}
+
+.expertiseItem:hover {
+  gap: 1.8rem;
+}
+
+.expertiseArrow {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  opacity: 0.45;
+  transition: opacity 0.3s ease;
+  flex-shrink: 0;
+}
+
+.expertiseItem:hover .expertiseArrow {
+  opacity: 1;
+}
+
+/* ─── Clients Carousel ──────────────────────────────────── */
+.carouselSection {
+  padding: 7rem 0;
+  background-color: #f0ede6;
+  overflow: hidden;
+}
+
+.carouselHeader {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 6rem 3rem;
+}
+
+.carouselTrack {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 2rem;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.carouselTrack:last-child {
+  margin-bottom: 0;
+}
+
+.carouselInner {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scrollLeft 28s linear infinite;
+}
+
+.carouselInnerReverse {
+  animation: scrollRight 32s linear infinite;
+}
+
+.carouselTrack:hover .carouselInner {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+
+@keyframes scrollRight {
+  from { transform: translateX(-33.333%); }
+  to   { transform: translateX(0); }
+}
+
+.clientLogo {
+  flex-shrink: 0;
+  width: 200px;
+  padding: 1.5rem 2.5rem;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImg {
+  height: 36px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  display: block;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.clientLogo:hover .logoImg {
+  opacity: 1;
+}
+
+.logoImgLarge {
+  height: 52px;
+  max-width: 180px;
+}
+
+/* ─── Approach ──────────────────────────────────────────── */
+.approachSection {
+  border-top: 1px solid var(--border-color);
+}
+
+.approachGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 8rem;
+  align-items: start;
+}
+
+.approachLabel {
+  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  position: sticky;
+  top: 8rem;
+}
+
+.approachContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.approachText {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+/* ─── CTA ───────────────────────────────────────────────── */
+.ctaSection {
+  background-color: #0a0a0a;
+  color: #f8f8f2;
+}
+
+.ctaInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ctaEyebrow {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(248, 248, 242, 0.35);
+}
+
+.ctaEmail {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-size: clamp(2rem, 4.5vw, 5.5rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: #f8f8f2;
+  transition: opacity 0.3s ease;
+  border-bottom: 1px solid rgba(248, 248, 242, 0.12);
+  padding-bottom: 1.5rem;
+  word-break: break-all;
+}
+
+.ctaEmail:hover {
+  opacity: 0.6;
+}
+
+.ctaArrow {
+  font-size: 0.55em;
+  opacity: 0.45;
+}
+
+.ctaLinks {
+  display: flex;
+  gap: 3rem;
+  padding-top: 1rem;
+}
+
+.ctaLink {
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(248, 248, 242, 0.4);
+  border-bottom: 1px solid rgba(248, 248, 242, 0.12);
+  padding-bottom: 4px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.ctaLink:hover {
+  color: #f8f8f2;
+  border-color: rgba(248, 248, 242, 0.5);
+}
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .sectionInner {
+    padding: 7rem 4rem;
+  }
+  .hero {
+    padding: 4rem;
+  }
+  .heroScroll {
+    right: 4rem;
+    bottom: 4rem;
+  }
+  .bioGrid,
+  .approachGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .portraitCol {
+    position: static;
+    max-width: 320px;
+  }
+  .approachLabel {
+    position: static;
+  }
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .expertiseLabelCol {
+    position: static;
+  }
+  .expertiseGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .ctaInner {
+    padding: 7rem 4rem;
+  }
+  .carouselHeader {
+    padding: 0 4rem 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1.5rem;
+    padding-bottom: 4rem;
+  }
+  .heroScroll {
+    display: none;
+  }
+  .sectionInner {
+    padding: 5rem 1.5rem;
+  }
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .ctaInner {
+    padding: 5rem 1.5rem;
+  }
+  .ctaEmail {
+    font-size: 1.6rem;
+    word-break: break-all;
+  }
+  .carouselHeader {
+    padding: 0 1.5rem 2.5rem;
+  }
+  .clientLogo {
+    width: 160px;
+    padding: 1.2rem 2rem;
+  }
+
+  .logoImg {
+    height: 28px;
+  }
+}

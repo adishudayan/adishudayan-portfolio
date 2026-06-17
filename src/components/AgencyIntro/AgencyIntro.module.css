@@ -1,0 +1,81 @@
+.agencyIntro {
+  padding: 10rem 4rem;
+  background-color: var(--bg-color);
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mainTextContainer {
+  margin-bottom: 5rem;
+}
+
+.mainTextLine {
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 0;
+  will-change: transform, opacity;
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+}
+
+.subTextContainer {
+  max-width: 600px;
+}
+
+.subTextLine {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0 0 0.5rem 0;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  border-bottom-color: var(--text-primary);
+}
+
+.link:hover .arrow {
+  transform: translateX(10px);
+}
+
+@media (max-width: 1024px) {
+  .bottomSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .agencyIntro {
+    padding: 6rem 1.5rem;
+  }
+}

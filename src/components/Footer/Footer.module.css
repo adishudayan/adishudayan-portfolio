@@ -1,0 +1,97 @@
+.footer {
+  padding: 8rem 4rem 4rem 4rem;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  /* The footer on workoholics uses a pseudo element or border to separate it */
+  border-top: 1px solid var(--border-color);
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ctaSection {
+  margin-bottom: 8rem;
+}
+
+.ctaLink {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.ctaText {
+  font-size: clamp(4rem, 10vw, 12rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1;
+  transition: color 0.3s ease;
+  will-change: transform, opacity;
+}
+
+.ctaLink:hover .ctaText {
+  color: var(--hover-accent);
+}
+
+.secondaryCTA {
+  margin-top: 2rem;
+}
+
+.smallCtaLink {
+  display: inline-flex;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.smallCtaLink:hover {
+  border-bottom-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.footerLinksGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  padding-top: 4rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footerLink {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+  width: fit-content;
+}
+
+.footerLink:hover {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 4rem 1.5rem 2rem 1.5rem;
+  }
+  
+  .ctaSection {
+    margin-bottom: 4rem;
+  }
+  
+  .footerLinksGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

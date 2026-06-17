@@ -1,0 +1,191 @@
+.servicesSection {
+  padding: 8rem 4rem;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.processVisualContainer {
+  width: 100%;
+  margin-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visualWrapper {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.diamondSvg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.diamondStroke {
+  stroke: var(--text-primary);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.dottedLine {
+  stroke: var(--text-primary);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+.diamondLabel {
+  font-size: 2.2rem;
+  font-weight: 500;
+  fill: var(--text-primary);
+  letter-spacing: -0.02em;
+  text-anchor: middle;
+}
+
+.phaseLabel {
+  font-size: 1.1rem;
+  font-weight: 400;
+  fill: var(--text-secondary);
+  font-style: italic;
+  text-anchor: middle;
+}
+
+.subTextContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3rem;
+}
+
+.subText {
+  max-width: 450px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  text-align: right;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.servicesList {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceItem {
+  border-top: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceItem:last-child {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.serviceLink {
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
+  transition: padding-left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Background element for hover fill effect */
+.serviceItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--hover-accent);
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+
+.serviceItem:hover::before {
+  transform: translateY(0);
+}
+
+.serviceId {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-right: 2rem;
+  font-variant-numeric: tabular-nums;
+  transition: color 0.4s ease;
+}
+
+.serviceTitle {
+  font-size: clamp(3rem, 5vw, 6rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin: 0;
+  transition: color 0.4s ease;
+}
+
+.serviceItem:hover .serviceLink {
+  padding-left: 2rem;
+}
+
+.serviceItem:hover .serviceId,
+.serviceItem:hover .serviceTitle {
+  color: var(--bg-color); /* Invert text color on hover */
+}
+
+/* Floating Hover Image Container */
+.hoverImageContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 160px;
+  pointer-events: none;
+  z-index: 100;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.hoverImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .serviceLink {
+    padding: 2rem 0;
+  }
+  /* Typically disable hover effect on smaller screens / touch devices */
+  .hoverImageContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .introTextContainer {
+    margin-bottom: 4rem;
+  }
+  
+  .serviceItem:hover .serviceLink {
+    padding-left: 1rem;
+  }
+}
