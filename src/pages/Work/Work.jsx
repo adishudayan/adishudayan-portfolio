@@ -42,7 +42,7 @@ const workItems = [
     slug: 'voice-commerce',
     title: 'Voice Commerce CUX',
     year: '2025',
-    image: '/conversational-ux-thumnail',
+    image: '/conversational-ux-thumnail.png',
     description:
       'Designed a hybrid voice and visual model for completing eCommerce tasks without a screen.',
     tags: ['Conversational UX', 'R&D Concept', 'eCommerce UX'],
